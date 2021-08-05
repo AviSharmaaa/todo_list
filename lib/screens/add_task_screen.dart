@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:todo_list/constants.dart';
 import 'package:todo_list/helpers/database_helper.dart';
 import 'package:todo_list/models/task_model.dart';
 
@@ -86,7 +87,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white10,
+      backgroundColor: kTileColor,
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 40, vertical: 80),
@@ -98,7 +99,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                 child: Icon(
                   Icons.arrow_back,
                   size: 30,
-                  color: Colors.white,
+                  // color: Colors.white,
                 ),
               ),
               SizedBox(
@@ -107,7 +108,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
               Text(
                 widget.task == null ? "Add Task" : "Update Task",
                 style: TextStyle(
-                    color: Colors.white,
+                    color: kTextColor,
                     fontSize: 40,
                     fontWeight: FontWeight.bold),
               ),
@@ -121,11 +122,11 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 20),
                       child: TextFormField(
-                        style: TextStyle(fontSize: 18, color: Colors.white),
+                        style: TextStyle(fontSize: 18, color: Colors.black),
                         decoration: InputDecoration(
                             labelText: 'Title',
                             labelStyle:
-                                TextStyle(fontSize: 18, color: Colors.white),
+                                TextStyle(fontSize: 18, color: kTextColor),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
                                 borderSide: BorderSide(
@@ -144,12 +145,12 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                         showCursor: false,
                         readOnly: true,
                         controller: _dateController,
-                        style: TextStyle(fontSize: 18, color: Colors.white),
+                        style: TextStyle(fontSize: 18),
                         onTap: _handleDate,
                         decoration: InputDecoration(
                             labelText: 'Date',
                             labelStyle:
-                                TextStyle(fontSize: 18, color: Colors.white),
+                                TextStyle(fontSize: 18, color: kTextColor),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
                             )),
@@ -167,8 +168,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                             value: priority,
                             child: Text(
                               priority,
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 18),
+                              style: TextStyle(fontSize: 18, color: kTextColor),
                             ),
                           );
                         }).toList(),
@@ -176,7 +176,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                         decoration: InputDecoration(
                             labelText: 'Priority',
                             labelStyle:
-                                TextStyle(fontSize: 18, color: Colors.white),
+                                TextStyle(fontSize: 18, color: kTextColor),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
                             )),
@@ -195,14 +195,14 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                       height: 60,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: Theme.of(context).primaryColor,
                         borderRadius: BorderRadius.circular(30),
+                        gradient: kGradient,
                       ),
                       child: TextButton(
                         child: Text(
-                          widget.task == null ? "Add" : "Update",
+                          widget.task == null ? "Add Task" : "Update Task",
                           style: TextStyle(
-                            color: Colors.white,
+                            color: kTextColor2,
                             fontSize: 20,
                           ),
                         ),
@@ -215,14 +215,13 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                             height: 60,
                             width: double.infinity,
                             decoration: BoxDecoration(
-                              color: Theme.of(context).primaryColor,
-                              borderRadius: BorderRadius.circular(30),
-                            ),
+                                borderRadius: BorderRadius.circular(30),
+                                gradient: kGradient),
                             child: TextButton(
                               child: Text(
                                 "Delete",
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color: kTextColor2,
                                   fontSize: 20,
                                 ),
                               ),
