@@ -1,16 +1,40 @@
 # todo_list
 
-A new Flutter project.
+Life can feel overwhelming. But it doesn't have to.
 
-## Getting Started
+A Simple To-do app design in flutter to keep track of your task. You can add title, due-date and priority to your tasks.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Give a [**Title**] to your task
+- Give your task [**Due**] [**Date**]
+- Add [**Task**] by defining its priority
+- [**Click**] [**on**] [**the**] [**task**] to update or delete a task
+- Stores data offline using [**Sqflite**](https://github.com/tekartik/sqflite "Flutter Database") database
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+
+<img src="/assets/Screenshots/Screenshot1.png" />
+
+## 🍰 Contributing
+
+Pull Requests are always welcome! 
+If you wish to contribute using Github, you can work on any features  or create one on your own. After adding your code, send us a Pull Request.
+
+
+- Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/AviSharma1305/todo_list/compare).
+
+
+## 🌈 What's next
+
+Here are some ideas that are coming really soon 👀
+
+- [**Group**] similar tasks under a common label
+- [**Sorting**] tasks based on date and priority
+- [**Description**] for Task
+- [**Reminder**] with notification
+
+## 🛡️ License
+
+This project is licensed under the MIT License - see the [`LICENSE`](LICENSE) file for details.

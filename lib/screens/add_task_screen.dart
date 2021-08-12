@@ -87,7 +87,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kTileColor,
+      backgroundColor: Colors.white70.withOpacity(0.95),
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 40, vertical: 80),
@@ -193,7 +193,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 20),
                       height: 60,
-                      width: double.infinity,
+                      width: 200,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         gradient: kGradient,
@@ -211,12 +211,13 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                     ),
                     widget.task != null
                         ? Container(
-                            margin: EdgeInsets.symmetric(vertical: 20),
+                            margin: EdgeInsets.symmetric(vertical: 10),
                             height: 60,
-                            width: double.infinity,
+                            width: 200,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
-                                gradient: kGradient),
+                                gradient: LinearGradient(
+                                    colors: [Color(0xFFFF0000), Color(0xFF990000).withOpacity(0.74)])),
                             child: TextButton(
                               child: Text(
                                 "Delete",

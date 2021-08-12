@@ -99,7 +99,7 @@ class _ToDoScreenState extends State<ToDoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kTileColor.withOpacity(0.95),
+      backgroundColor: Colors.white70.withOpacity(0.95),
       floatingActionButton: FloatingActionButton(
         backgroundColor: kPrimaryColor,
         child: Container(
